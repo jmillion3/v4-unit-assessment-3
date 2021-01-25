@@ -39,7 +39,7 @@
     let isTheLightOn = false
 
     function flipTheSwitch(){
-      // isTheLightOn = true
+      isTheLightOn = true
       if(isTheLightOn === false){
         isTheLightOn = true
         return `The light is on`
@@ -59,14 +59,14 @@
   //Invoke kitchenSwitch.
 
   //CODE HERE
-  kitchenSwitch()
+  // kitchenSwitch()
   
   //Create a variable called bathroomSwitch whose value is the invocation of lightSwitch. 
 
   //CODE HERE
   let bathroomSwitch = lightSwitch()
   
-  //Invoke bathroomSwitch twice.
+  // Invoke bathroomSwitch twice.
   
   //CODE HERE
 
@@ -116,18 +116,32 @@
   */
 
   //CODE HERE
+function inventory(){
+  let products = []
 
+  return {
+    readProducts: () => {
+      return products
+     },
+     addToProducts: (string) => {
+       return products.push(string)
+     },
+     deleteFromProducts: (string) => {
+       return products.splice(index, 1)
+     }
+  }
+}
 
   /*
     Create a variable called 'shoes' whose value is the invocation of inventory.
   */
 
   //CODE HERE
-
+let shoes = inventory()
 
   /*
     Add an item to your shoes array using the addToProducts function
   */
 
   //CODE HERE
-
+shoes.addToProducts('Nike MAG')
